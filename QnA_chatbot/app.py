@@ -30,7 +30,7 @@ if "vectors" not in st.session_state:
     st.title("Application Demo")
 llm = ChatGroq(groq_api_key,model="llama-3.3-70b-versatile")
 
-prompt =ChatPromptTemplate("""
+prompt =ChatPromptTemplate.from_template("""
 Answer the questions based on the provided context only.
 Please provide the most accurate response based on the question.
 
